@@ -76,3 +76,31 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+  will-change: transform;
+}
+
+/* Pause animation for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll {
+    animation: none;
+    transform: translateX(0);
+  }
+}
+
+/* Optional: smoother animation on better displays */
+@media (min-resolution: 192dpi) {
+  .animate-scroll {
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
