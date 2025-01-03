@@ -15,10 +15,11 @@ const config: Config = {
       },
       colors: {
         sand: {
-          50: "#FCF5EB", 
+          50: "#FCF5EB",
         },
         charcoal: {
-          950: "#121214", 
+          950: "#121214",
+          900: "#2C2C31",
         },
         custom: {
           black: "#1C1C1C",
@@ -66,10 +67,16 @@ const config: Config = {
           "5": "hsl(var(--chart-5))",
         },
       },
+      lineHeight: {
+        paragraph: "142%",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      screens: {
+        xs: "375px",
       },
     },
   },
